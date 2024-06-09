@@ -3,7 +3,7 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const session = require('express-session');
-
+s
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -34,13 +34,8 @@ app.use((req,res,next)=>{
 
 // set template engine
 app.set("view engine","ejs");
-
+// upload image
 app.use(express.static("uploads"));
-
-// // Define a simple route
-// app.get("/", (req, res) => {
-//     res.send("hello meo meo Minh Thanh");
-// });
 
 // route prefix
     app.use("",require("./routes/routes"));
